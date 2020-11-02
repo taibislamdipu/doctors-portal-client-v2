@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 const StatusUpdate = (props) => {
     const { handleSubmit, register } = useForm()
     const onSubmit = (data, e) => {
-        fetch('https://doctors-portal-website.herokuapp.com/updateStatus', {
+        fetch('http://localhost:5000/updateStatus', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -15,6 +15,7 @@ const StatusUpdate = (props) => {
             window.location.reload();
         });
     }
+
     return (
         <div className="popup" id={props.id}>
             <div className="popupContent">

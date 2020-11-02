@@ -62,7 +62,7 @@ function AppointmentsServices(props) {
         const appointment = { name, gender, age, weight, phone, email, time, date }
 
         // post
-        fetch('https://doctors-portal-website.herokuapp.com/addAppointment', {
+        fetch('http://localhost:5000/addAppointment', {
             method: 'POST',
             body: JSON.stringify(appointment),
             headers: {

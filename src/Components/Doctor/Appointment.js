@@ -20,7 +20,7 @@ const Appointment = () => {
     // Current Appointment by Date
     const [appointments, setAppointments] = useState([]);
     useEffect(() => {
-        fetch('https://doctors-portal-website.herokuapp.com/appointments').then(res => res.json()).then(data => {
+        fetch('http://localhost:5000/appointments').then(res => res.json()).then(data => {
             setAppointments(data);
         });
     }, []);

@@ -11,7 +11,7 @@ import Paper from '@material-ui/core/Paper';
 const Patients = () => {
     const [appointments, setAppointments] = useState([]);
     useEffect(() => {
-        fetch('https://doctors-portal-website.herokuapp.com/appointments').then(res => res.json()).then(data => {
+        fetch('http://localhost:5000/appointments').then(res => res.json()).then(data => {
             setAppointments(data);
         });
     }, []);
