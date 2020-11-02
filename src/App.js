@@ -6,6 +6,7 @@ import HomePage from './Components/HomePage/HomePage';
 import Appointment from './Components/Appointment/Appointment';
 import Doctor from './Components/Doctor/Doctor';
 import Login from './Components/Login/Login';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -34,9 +35,13 @@ function App() {
                             <Login></Login>
                         </Route>
 
-                        <Route path="/doctor">
+                        {/*  <Route path="/doctor">
                             <Doctor></Doctor>
-                        </Route>
+                        </Route> */}
+
+                        <PrivateRoute path="/doctor">
+                            <Doctor></Doctor>
+                        </PrivateRoute>
 
                         <Route path="/appointment">
                             <Header></Header>
